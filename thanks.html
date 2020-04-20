@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>Онлайн-курс "Бизнес в условиях сетевой экономики"</title>
+    <link rel="shortcut icon" href="32x32_red.png" type="image/png" />
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="fancybox/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+	<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1193929287422192');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1193929287422192&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+<script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?159",t.onload=function(){VK.Retargeting.Init("VK-RTRG-293312-gxxSm"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-293312-gxxSm" style="position:fixed; left:-999px;" alt=""/></noscript>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127647896-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-127647896-1');
+</script>
+
+</head>
+<body>
+
+<div id="promo">
+    <video id="fullscreen-bg__video" loop muted autoplay poster="img/poster.jpg">
+        <source src="world.mp4" type="video/mp4">
+    </video>
+    <div id="top-panel">
+        <div class="wrapper">
+            <a href="index.html" class="logo"></a>
+        </div>
+    </div>
+
+    <div class="content-block thanks">
+        <!--<p>Онлайн-курс по авторской методике Л.А. Колесовой</p>-->
+        <h1>Благодарим<br>за регистрацию!</h1>
+        <div class="red-line"></div>
+        <div class="text">Вам на почту отправлен код доступа для входа в личный кабинет.<br>По всем возникающим вопросам
+            можно связаться с нами по телефону<br>
+            +7 (495) 642-35-34
+        </div>
+        <a class="begin-btn" href="index.html">Вернуться назад</a>
+        <div class="snoska"><sup>*</sup>в случае необнаружения письма, проверьте папку спам</div>
+    </div>
+
+</div>
+
+<div id="footer">
+    <ul class="menu">
+        <li><a href="#managment">Управление и влияние</a></li>
+        <li><a href="#lider-head">Лидерство и мегатренды</a></li>
+        <li><a href="#network">Сетевое общество</a></li>
+        <li><a href="#trust">Новое доверие и открытость</a></li>
+    </ul>
+    <div class="social-btns">
+        <a class="facebook soc"></a>
+        <a class="vk soc"></a>
+        <a class="linkend soc"></a>
+        <a class="instagram soc"></a>
+        <a class="telegram soc"></a>
+        <a class="twiter soc"></a>
+    </div>
+    <div class="copy">2018, М.А.М (С)</div>
+    <div class="logo"></div>
+    <div class="dev"></div>
+</div>
+
+
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="fancybox/jquery.fancybox.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('[data-fancybox]').fancybox({
+            protect: true
+        });
+
+        $('.menu-open-btn').click(function () {
+            $(this).toggleClass('open');
+
+            if ($(this).hasClass('open')) {
+                $('#top-panel .menu').animate({right: 0}, 500);
+            } else {
+                $('#top-panel .menu').animate({right: "-100vw"}, 500);
+            }
+        });
+
+        $(window).scroll(function () {
+            // $('.begin-btn').animate({top: "100px"}, 500);
+
+        });
+
+        $('#email-btn').click(function () {
+            send($('input[name="your-email"]').val(), $('input[name="your-name"]').val(), $('input[name="your-phone"]').val());
+
+        });
+
+    });
+
+    $(document).resize(resize);
+
+    function resize() {
+
+    }
+
+
+    function emailValidate(email, name, phone) {
+        if (email != '') {
+            var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+            if (pattern.test(email)) {
+                if (name == '')
+                    alert('Поле имя не должно быть пустым!');
+                else if (phone != '') {
+
+
+                    return true;
+                } else
+                    alert('Поле телефон не должно быть пустым!');
+            } else {
+                alert("Введите корректный e-mail!")
+            }
+        } else {
+            alert('Поле e-mail не должно быть пустым!');
+        }
+        return false;
+    }
+
+    function send(email, name, phone) {
+        if (emailValidate(email, name, phone))
+            $.ajax({
+                type: "POST",
+                url: "send.php",
+                data: {email: email, name: name, phone: phone},
+                success: function () {
+                    alert("Спасибо за Ваше обращение!");
+                }
+            });
+    }
+
+</script>
+</body>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter50716942 = new Ya.Metrika2({
+                    id:50716942,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/tag.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks2");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/50716942" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</html>

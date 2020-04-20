@@ -1,0 +1,118 @@
+.ldesktop(@rules) {
+    @media (min-width: 1921px) {
+        @rules();
+    }
+}
+.desktop(@rules) {
+    @media (min-width: 1366px) {
+        @rules();
+    }
+}
+
+.tablet-v(@rules) {
+    @media (min-width: 720px) { @rules();
+    }
+}
+
+.mobile(@rules) {
+    @media (max-width: 719px) { @rules();
+    }
+}
+
+.calc(@pr, @per, @wi) {
+        @{pr}: calc(~'@{per} - @{wi}');
+        @{pr}: -moz-calc(~'@{per} - @{wi}');
+        @{pr}: -webkit-calc(~'@{per} - @{wi}');
+}
+
+.flex {
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+}
+
+.flex-column {
+    flex-direction: column;
+    -ms-flex-direction: column;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+}
+
+
+.flex-row {
+    flex-direction: row;
+    -ms-flex-direction: row;
+    -moz-flex-direction: row  ;
+    -webkit-flex-direction: row;
+}
+
+
+.space-between {
+    justify-content: space-between;
+    -moz-justify-content: space-between;
+    -webkit-justify-content: space-between;
+    -ms-justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
+    -moz-justify-content: space-around;
+    -webkit-justify-content: space-around;
+    -ms-justify-content: space-around;
+}
+
+.space-evenly {
+    justify-content: space-evenly;
+    -moz-justify-content: space-evenly;
+    -webkit-justify-content: space-evenly;
+    -ms-justify-content: space-evenly;
+}
+
+.space-center {
+    justify-content: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+}
+
+.align-items-top {
+    align-items: start;
+    -moz-align-items: start;
+    -webkit-align-items: flex-start;
+    -ms-align-items: start;
+}
+
+.align-items-bottom {
+    align-items: end;
+    -moz-align-items: end;
+    -webkit-align-items: flex-end;
+    -ms-align-items: end;
+}
+
+.align-items-center {
+    align-items: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+}
+
+.flex-wrap {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+
+p {
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0;
+}
+
+
+
+
+
